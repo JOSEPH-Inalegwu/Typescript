@@ -27,3 +27,12 @@ for (let book of books) {
 console.log(foundBook);
 
 
+// CHALLENGE
+let orderStatus: 'processing' | 'shipped' | 'delivered' = 'processing'
+orderStatus = 'shipped'
+orderStatus = 'delivered'
+// orderStatus = 'cancelled' 
+
+let discount: number | string = 15
+discount = '15%'
+// discount = true
