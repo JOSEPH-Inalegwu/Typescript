@@ -1,4 +1,8 @@
-type product = {readonly name:string, price?:number, inStock:boolean};
+type product = {
+    readonly name: string, 
+    price?: number, 
+    inStock: boolean
+};
 
 let inventory: product[] = [
     {name: 'Apple', price: 10, inStock: true},
