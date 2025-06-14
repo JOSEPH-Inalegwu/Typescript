@@ -50,6 +50,23 @@ if (nameInList(nameCheck)) {
     console.log(`${nameCheck} is not in the list.`);
 }
 
+// OPTIONAL AND DEFAULT PARAMETERS IN FUNCTIONS
+
+//OPTIONAL
+function calculatePrice(price: number, discount?: number): number {
+    return price - (discount || 0)
+}
+
+let priceAtDiscount = calculatePrice(100, 20)
 
 
+//DEFAULT
+function calculateScore(
+    initialScore: number, 
+    penaltyPoint: number = 0
+): number {
+    return initialScore - penaltyPoint
+}
 
+let scoreAfterPenalty = calculateScore(100, 30)
+let scoreWithoutPenalty = calculateScore(100)
