@@ -54,7 +54,7 @@ if (nameInList(nameCheck)) {
 
 //OPTIONAL
 function calculatePrice(price: number, discount?: number): number {
-    return price - (discount || 0)
+    return price - (discount || 0) //This logic needs to be setup for OPTIONAL parameter to work
 }
 
 let priceAtDiscount = calculatePrice(100, 20)
@@ -63,10 +63,35 @@ let priceAtDiscount = calculatePrice(100, 20)
 //DEFAULT
 function calculateScore(
     initialScore: number, 
-    penaltyPoint: number = 0
+    penaltyPoint: number = 0 //This logic for DEFAULT parameter
 ): number {
     return initialScore - penaltyPoint
 }
 
 let scoreAfterPenalty = calculateScore(100, 30)
 let scoreWithoutPenalty = calculateScore(100)
+
+
+
+/* REST PARAMETERS IN TYPESCRIPT */
+/*function sum(message: string, ...numbers: number[]): string {
+    const doubled = numbers.map((num) => num * 2)
+    console.log(doubled);
+    
+    let total = numbers.reduce((prev, current) => {
+        return prev + current
+    }, 0)
+    return `${message} ${total}`;
+}
+
+let finalResult = sum('The total is', 1, 2, 3, 4, 5);
+console.log(finalResult);*/
+
+
+/* WHAT TYPES TO RETURN FROM A FUNCTION */
+function logMessage(message: string) {
+    console.log(message);
+}
+
+logMessage('Hello, Typescript');
+
